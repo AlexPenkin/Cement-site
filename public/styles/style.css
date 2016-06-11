@@ -1,0 +1,62 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.headWrap {
+width: 100%;
+min-height: 1px;
+}
+.head {
+height: 71px;
+width: 1200px;
+margin: 0 auto;
+
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.headDiv1 div {
+  width: 180px;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+.headDiv1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 280px;
+  align-items: center;
+}
+.headDiv2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  align-items: center;
+}
+.ourEmail{
+  display: flex;
+
+  flex-direction: column;
+}
+.ourPhone {
+  display: flex;
+
+  flex-direction: column;
+}
+.ourEmail span {
+color: #6cb306;
+font-size: 15px;
+}
+.ourEmail a {
+color: black;
+font-size: 20px;
+}
+.ourPhone span {
+  color: #6cb306;
+  font-size: 15px;
+}
+.ourPhone :last-child {
+  color: #6cb306;
+  font-size: 20px;
+}
