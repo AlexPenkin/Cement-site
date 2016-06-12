@@ -55,17 +55,41 @@ html, body {
 }
 .ourPhone :last-child {
   color: black;
-
   font-size: 20px;
   font-weight: 700;
 }
 .menuWrap {
   width: 100%;
   height: 46px;
+  background-color: #36322d;
 }
-.menu{
+.menu {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
-  background-color: #36322d;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.companyName {
+  width: 220px;
+  color: white;
+  font-family: PTSans;
+  font-size: 22px;
+  font-weight: 700;
+}
+.menuNav {
+  width: 650px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuNav span {
+color: white;
+font-family: PTSans;
+font-size: 17px;
+font-weight: 400;
 }
