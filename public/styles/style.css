@@ -176,3 +176,14 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+.textWrap {
+  min-width: 1200px;
+  min-height: 1px;
+}
+.text {
+  color: #53b306;
+font-family: "Amazing Grotesk";
+font-size: 37px;
+font-weight: 400;
+text-align: center;
+}
