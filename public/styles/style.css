@@ -1,9 +1,9 @@
 html, body {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 .headWrap {
-  width: 100%;
+  min-width: 1200px;
   min-height: 1px;
 }
 .head {
@@ -53,13 +53,13 @@ html, body {
   color: #6cb306;
   font-size: 15px;
 }
-.ourPhone :last-child {
+.ourPhone:last-child {
   color: black;
   font-size: 20px;
   font-weight: 700;
 }
 .menuWrap {
-  width: 100%;
+  min-width: 1200px;
   height: 46px;
   background-color: #36322d;
 }
@@ -88,8 +88,54 @@ html, body {
   align-items: center;
 }
 .menuNav span {
-color: white;
-font-family: PTSans;
-font-size: 17px;
-font-weight: 400;
+  color: white;
+  font-family: PTSans;
+  font-size: 17px;
+  font-weight: 400;
+}
+.manBack {
+  height: 540px;
+  background-color: #777;
+  min-width: 1200px;
+  z-index: -1;
+}
+.makeBidWrap {
+
+  margin-left: 753px;
+  position: relative;
+  width: 401px;
+  height: 393px;
+  background: rgba(255, 255, 255, 0.51);
+  border-radius: 3px;
+  z-index: 1;
+}
+.makeBid {
+  position: absolute;
+  width: 367px;
+  height: 362px;
+  background-color: white;
+  border: 1.5px solid #417815;
+  border-radius: 3px;
+  z-index: 10;
+  top: 15px;
+  left: 15px;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+}
+.comeOn {
+  padding: 29px 0 20px 753px;
+text-align: center;
+  width: 400px;
+  height: auto;
+  color: #fbf8e5;
+  font-family: "Amazing Grotesk";
+  font-size: 37px;
+  font-weight: 600;
+}
+.macBackWrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
 }
