@@ -388,9 +388,10 @@ table :nth-child(even)> .productPrice {
   display: flex;
   justify-content: center;
 }
+
 .bordurs {
   width: 1200px;
-  height: 370px;
+  height: 450px;
   margin: 65px 0;
   background: white;
   z-index: 1;
