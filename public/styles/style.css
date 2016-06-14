@@ -390,7 +390,7 @@ table :nth-child(even)> .productPrice {
 }
 .bordurs {
   width: 1200px;
-  height: 375px;
+  height: 370px;
   margin: 65px 0;
   background: white;
   z-index: 1;
@@ -475,10 +475,10 @@ font-size: 37px;
   min-width: 1200px;
   height: 475px;
   background-image: url('../pics/bid2.png');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: round;
+  -moz-background-size: round;
+  -o-background-size: round;
+  background-size: round;
 }
 .make {
   width: 1200px;
@@ -505,6 +505,120 @@ font-family: PTSansBold;
   color: #659f16;
 }
 .features {
-  padding-left:  800px;
-  width: 440px;
+  padding-left:  700px;
+  width: 445px;
+}
+.numbersWrap{
+min-width: 1200px;
+height: 225px;
+}
+.numbersWrap hr {
+  width: 100%;
+  height: 3px;
+  background-color: #e7ece3;
+  border: none;
+}
+.numbers{
+width: 1200px;
+height: 100%;
+margin: -15px auto;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+.num {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 210px;
+  padding-right: 100px;
+}
+.n {
+  color: black;
+  font-family: AmazingGroteskRegular;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: -20px;
+
+}
+.a {
+  color: #6cb306;
+  font-family: AmazingGroteskRegular;
+  font-size: 20px;
+  font-weight: 600;
+
+
+
+}
+.s {
+  color: black;
+  font-family: AmazingGroteskRegular;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.contactsWrap {
+min-width: 1200px;
+
+}
+.contacts {
+width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.contacts h1 {
+  color: #53b306;
+  font-family: AmazingGroteskRegular;
+  font-size: 37px;
+  font-weight: 400;
+}
+.contacts hr {
+  width: 65px;
+  margin-bottom:  25px;
+}
+.adress {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.adress span {
+  font-family: PTSansRegular;
+  font-size: 18px !important;
+font-weight: 400 !important;
+}
+.adress :first-child {
+  color: black;
+font-family: PTSansRegular;
+font-size: 25px !important;
+font-weight: 700 !important;
+line-height: 36px;
+text-transform: uppercase;
+}
+.phones {
+  padding: 50px 0;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reg {
+  font-family: PTSansRegular;
+  font-size: 18px !important;
+font-weight: 400 !important;
+}
+.phones span {
+  font-family: PTSansRegular;
+  font-size: 22px;
+font-weight: 700;
+}
+.email span {
+  font-family: PTSansRegular;
+  font-size: 22px;
+font-weight: 700;
 }
