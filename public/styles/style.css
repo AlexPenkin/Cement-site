@@ -17,6 +17,7 @@
 html, body {
   min-width: 100%;
   min-height: 100%;
+
 }
 .headWrap {
   min-width: 1200px;
@@ -315,8 +316,12 @@ table {
   position: relative;
   border-collapse: collapse;
   text-align: center;
+  vertical-align: middle;
 }
-.productImg img {}
+.productImg img {
+  height: 60px;
+  width: auto;
+}
 .productName {
   width: 257px;
   height: 76px;
@@ -362,6 +367,7 @@ table :nth-child(even)> .productPrice {
   margin: 100px 0 100px -250px;
   height: 1px;
   width: 80%;
+  min-width: 1200px;
   background: #646663;
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,	hsl(100, 1%, 39%)), color-stop(50%,hsla(0,0%,0%,.75)), color-stop(100%,hsla(0,0%,0%,0)));
    background: -webkit-linear-gradient(left, hsla(0,0%,0%,0) 0%, 	hsl(100, 1%, 39%) 50%, hsla(0,0%,0%,0) 100%);
@@ -384,7 +390,7 @@ table :nth-child(even)> .productPrice {
 }
 .bordurs {
   width: 1200px;
-  height: 100%;
+  height: 375px;
   margin: 65px 0;
   background: white;
   z-index: 1;
@@ -403,4 +409,102 @@ table :nth-child(even)> .productPrice {
 .underDef {
   font-family: PTSansRegular !important;
 
+}
+.callUsWrap {
+
+position: relative;
+min-width: 1200px;
+height: 403px;
+background: hsl(93, 19%, 91%);
+overflow: hidden;
+
+}
+
+.callUs{
+  margin: 0 auto;
+  height: 403px;
+  width: 1200px;
+
+}
+.whyUsWrap {
+height: 280px;
+min-width: 1200px;
+}
+.whyUs {
+width: 1200px;
+height: 280px;
+margin: 0 auto;
+}
+.whyUsTable {
+  width: 100%;
+}
+.whyUs p {
+  font-family: AmazingGroteskRegular;
+  color: #6cb306;
+text-align: center;
+font-size: 37px;
+}
+
+.us {
+  text-align: center;
+  width: 112px;
+  vertical-align: top;
+  font-family: PTSansRegular;
+  font-size: 20px;
+}
+.us1 {
+  text-align: center;
+  width: 190px;
+  font-family: PTSansRegular;
+  font-size: 20px;
+}
+.us2 {
+  text-align: center;
+  width: 156px;
+  font-family: PTSansRegular;
+  font-size: 20px;
+}
+.us3 {
+  text-align: center;
+  width: 190px;
+  font-family: PTSansRegular;
+  font-size: 20px;
+  vertical-align: top;
+}
+.makeBid2 {
+  min-width: 1200px;
+  height: 475px;
+  background-image: url('../pics/bid2.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.make {
+  width: 1200px;
+    height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.make img {
+  float: left;
+  display: flex;
+  position: absolute;
+  align-items: flex-end;
+  bottom: 70px;
+    left: 30px;
+    z-index: 11;
+}
+.features p {
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+font-family: PTSansBold;
+}
+.features :last-child {
+  color: #659f16;
+}
+.features {
+  padding-left:  800px;
+  width: 440px;
 }
