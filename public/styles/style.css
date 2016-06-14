@@ -1,3 +1,19 @@
+@font-face {
+  font-family: PTSansRegular;
+  src: url(fonts/PTSansRegular.ttf);
+}
+@font-face {
+  font-family: PTSansBold;
+  src: url(fonts/PTSansBold.ttf);
+}
+@font-face {
+  font-family: AmazingGroteskRegular;
+  src: url(fonts/AmazingGroteskRegular.otf);
+}
+@font-face {
+  font-family: AmazingGroteskbold;
+  src: url(fonts/AmazingGroteskBold.otf);
+}
 html, body {
   min-width: 100%;
   min-height: 100%;
@@ -18,12 +34,13 @@ html, body {
   width: 180px;
   font-size: 15px;
   word-wrap: break-word;
+  font-family: PTSansRegular;
 }
 .headDiv1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 280px;
+  width: 300px;
   align-items: center;
 }
 .headDiv2 {
@@ -44,19 +61,23 @@ html, body {
 .ourEmail span {
   color: #6cb306;
   font-size: 15px;
+  font-family: PTSansRegular;
 }
 .ourEmail a {
   color: black;
   font-size: 20px;
+  font-family: PTSansBold;
 }
 .ourPhone span {
   color: #6cb306;
   font-size: 15px;
+  font-family: PTSansRegular;
 }
-.ourPhone :last-child {
+.ourPhone:last-child {
   color: black;
   font-size: 20px;
   font-weight: 700;
+  font-family: PTSansBold;
 }
 .menuWrap {
   min-width: 1200px;
@@ -79,6 +100,7 @@ html, body {
   font-family: PTSans;
   font-size: 22px;
   font-weight: 700;
+  font-family: PTSansBold;
 }
 .menuNav {
   width: 650px;
@@ -92,21 +114,35 @@ html, body {
   font-family: PTSans;
   font-size: 17px;
   font-weight: 400;
+  font-family: PTSansRegular;
 }
 .manBack {
   height: 540px;
-  background-color: #777;
-  min-width: 1200px;
-  z-index: -1;
+  background-image: url("../pics/manBack.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.man {
+  position: absolute;
+  margin-left: 463px;
+  margin-top: 73px;
+}
+.mansBrick {
+  position: absolute;
+  margin-top: 478px;
+  margin-left: 410px;
 }
 .makeBidWrap {
-  margin-left: 753px;
+  float: right;
   position: relative;
   width: 401px;
   height: 393px;
   background: rgba(255, 255, 255, 0.51);
   border-radius: 3px;
-  z-index: 1;
+  z-index: 10;
+  position: relative;
 }
 .makeBid {
   position: absolute;
@@ -127,12 +163,12 @@ html, body {
   align-items: center;
 }
 .comeOn {
-  padding: 29px 0 20px 753px;
+  padding: 29px 0 20px 800px;
   text-align: center;
   width: 400px;
   height: auto;
   color: #fbf8e5;
-  font-family: "Amazing Grotesk";
+  font-family: AmazingGroteskbold;
   font-size: 37px;
   font-weight: 600;
 }
@@ -140,41 +176,46 @@ html, body {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 .makeBidInp1 {
   text-indent: 15px;
   width: 322px;
-height: 50px;
-background-color: white;
-border: 1px solid gainsboro;
+  height: 50px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  font-family: PTSansRegular;
 }
 .makeBidInp2 {
   text-indent: 15px;
   width: 322px;
-height: 50px;
-background-color: white;
-border: 1px solid gainsboro;
+  height: 50px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  font-family: PTSansRegular;
 }
 .makeBidInp3 {
-  line-height:50px;
+  line-height: 50px;
   text-indent: 15px;
   width: 322px;
-height: 123px;
-background-color: white;
-border: 1px solid gainsboro;
+  height: 123px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  font-family: PTSansRegular;
 }
 .makeBidBut {
   width: 206px;
-height: 40px;
-background-image: linear-gradient(180deg, #9fbf3a 0%, #6a880d 100%);
-border-radius: 3px;
-color: white;
-font-family: PTSans;
-font-size: 18px;
-font-weight: 400;
-display: flex;
-align-items: center;
-justify-content: center;
+  height: 40px;
+  background-image: linear-gradient(180deg, #9fbf3a 0%, #6a880d 100%);
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: PTSansRegular;
 }
 .textWrap {
   min-width: 1200px;
@@ -182,8 +223,57 @@ justify-content: center;
 }
 .text {
   color: #53b306;
-font-family: "Amazing Grotesk";
-font-size: 37px;
-font-weight: 400;
-text-align: center;
+  font-family: AmazingGroteskRegular;
+  font-size: 37px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 40px;
+}
+.blocksWrap {
+  min-width: 1200px;
+  height: 440px;
+}
+.blocks {
+  width: 1200px;
+  height: 100%;
+  padding-top: 50px;
+  background: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.productsDef {
+  width: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productsDef span {
+  color: black;
+  font-family: PTSansRegular;
+  font-size: 23px;
+  font-weight: 700;
+  text-align: left;
+}
+.products {
+  width: 600px;
+  height: 380px;
+  border: solid 1px #9bb08b;
+}
+.productsImg {
+  padding: 30px 0;
+}
+.downloadPrice {
+  width: 201px;
+  height: 35px;
+  background-image: linear-gradient(to top, #ea6645 0%, #ea8345 100%);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: PTSansRegular;
+  font-size: 18px;
+  font-weight: 400;
 }
