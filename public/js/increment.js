@@ -17,10 +17,12 @@
           notCompleted = false;
           $(".w").spincrement({
             duration: 4000,
+            thousandSeparator: '',
             easing: 'easeInOutQuint'
           });
           $(".years").spincrement({
             duration: 3500,
+            thousandSeparator: '',
             easing: 'easeInOutQuint'
           });
 
