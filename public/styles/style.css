@@ -217,7 +217,14 @@ html, body {
   align-items: center;
   justify-content: center;
   font-family: PTSansRegular;
+  cursor: pointer;
+  box-shadow: 0 3px #47690a;
 }
+.makeBidBut:active {
+  box-shadow: 0 0px #47690a;
+  transform: translateY(4px);
+}
+
 .textWrap {
   min-width: 1200px;
   min-height: 1px;
@@ -294,7 +301,39 @@ table {
   font-family: PTSansRegular;
   font-size: 18px;
   font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 3px #b94a2e;
 }
+.downloadPrice:active {
+  box-shadow: 0 0px #b94a2e;
+  transform: translateY(4px);
+}
+
+.showAllPlate {
+  width: 201px;
+  height: 35px;
+  background-image: linear-gradient(to top, #ea6645 0%, #ea8345 100%);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: PTSansRegular;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 3px #b94a2e;
+}
+.showAllPlate:active {
+  box-shadow: 0 0px #b94a2e;
+  transform: translateY(4px);
+}
+ a {
+    text-decoration: none;
+
+    }
+
+
 .order {
   width: 126px;
   height: 35px;
@@ -307,6 +346,12 @@ table {
   font-family: PTSansRegular;
   font-size: 18px;
   font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 3px #47690a;
+}
+.order:active {
+  box-shadow: 0 0px #47690a;
+  transform: translateY(4px);
 }
 .productImg {
   width: 88px;
@@ -685,4 +730,24 @@ bottom: 0;
     align-items: inherit;
     justify-content: space-between;
     padding: 20px 0;
+}
+@-moz-document url-prefix()
+{
+.num {
+  line-height: 30px;
+}
+.n {
+    color: black;
+    font-family: AmazingGroteskRegular;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.a {
+  color: #6cb306;
+  font-family: AmazingGroteskRegular;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 }
