@@ -12,6 +12,7 @@
   <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
   <script src="js/jquery.easing.compatibility.js" type="text/javascript"></script>
   <script src="js/modal.js" type="text/javascript"></script>
+  <script src="js/scroll.js" type="text/javascript"></script>
   <title>CEM-Rus</title>
   <link href="./styles/style.css" rel="stylesheet" type="text/css" media="screen">
   <link href="./styles/normalize.css" rel="stylesheet" type="text/css" media="screen">
@@ -47,12 +48,12 @@
         <span>ООО "РусьЦемСнаб"</span>
       </div>
       <div class="menuNav">
-        <span>Тротуарная плитка</span>
-        <span>Цемент</span>
-        <span>Бордюр</span>
-        <span>Блоки</span>
-        <span>О нас</span>
-        <span>Контакты</span>
+        <a rel= "plates" href="#plates"><span>Тротуарная плитка</span></a>
+        <a rel=  "cement" href="#cement"> <span>Цемент</span></a>
+        <a rel= "bordurs" href="#bordurs"><span>Бордюр</span></a>
+        <a rel= "blocks" href="#blocks"><span>Блоки</span></a>
+        <a rel= "about" href="#about"><span>О нас</span></a>
+        <a rel= "footer" href="#footer"><span>Контакты</span></a>
       </div>
     </div>
   </div>
@@ -90,7 +91,7 @@
   <!-- Blocks -->
   <div class="blocksWrap">
     <div class="blocks">
-      <div class="productsDef">
+      <div  id="blocks"  class="productsDef">
         <span>Блоки фундаментные, блоки ФБС, стеновые пескобетонные, керамзитобетонные, изготовленные на вибропрессе</span>
         <div class="productsImg">
           <img src="../pics/blocks.png" alt="" />
@@ -169,10 +170,10 @@
   <div class="sexy_line"></div>
 
   <!-- Bordurs -->
-  <div class="bordursWrap">
+  <div  class="bordursWrap">
     <div class="bordurs">
       <div class="productsDef">
-        <span class="topDef">Бордюры магистральные,  дорожные садовые. </span>
+        <span  id="bordurs" class="topDef">Бордюры магистральные,  дорожные садовые. </span>
         <span class="underDef">С широкой областью применения: от трасс и магистралей,  до пешеходных дорожек</span>
         <div class="productsImg">
           <img src="../pics/bordurs.png" alt="" />
@@ -251,10 +252,10 @@
   <div class="sexy_line"></div>
 
   <!-- Plates -->
-  <div class="bordursWrap">
+  <div  class="bordursWrap">
     <div class="bordurs">
       <div class="productsDef">
-        <span class="topDef">Плитку тротуарную </span>
+        <span  id="plates" class="topDef">Плитку тротуарную </span>
         <span class="underDef">Более 30 наименований-вибропресованной, более 10 наименований-литье.
 Отличается высокой прочностью и морозостойкостью.</span>
         <div class="productsImg">
@@ -339,10 +340,10 @@
   <div class="sexy_line"></div>
 
   <!-- Cement -->
-  <div class="bordursWrap">
+  <div  class="bordursWrap">
     <div class="bordurs">
       <div class="productsDef">
-        <span class="topDef">Цемент </span>
+        <span  id="cement" class="topDef">Цемент </span>
         <span class="underDef"></span>
         <div class="productsImg">
           <img src="../pics/cement.png" alt="" />
@@ -391,48 +392,48 @@
     <div class="aw">
 
 
-    <div class="triangleWrap">
-      <div class="triangle">
+      <div class="triangleWrap">
+        <div class="triangle">
+        </div>
       </div>
-    </div>
 
 
-    <div class="callUs">
-      <div class="callUsText">
-        Связаться с нами
-      </div>
-      <img class="man2" src="../pics/man2.png" alt="" / style="z-index: 100;">
-      <div class="takeCons">
-        <span class="reg1">Получите консультацию <br>
+      <div class="callUs">
+        <div class="callUsText">
+          Связаться с нами
+        </div>
+        <img class="man2" src="../pics/man2.png" alt="" / style="z-index: 100;">
+        <div class="takeCons">
+          <span class="reg1">Получите консультацию <br>
               у наших менеджеров по тел.: <br>
               <span class="phone">8 (4912) 99-52-52</span></span>
-        <div class="or">
-          <div class="line"> </div>
-          <span class="reg1">
+          <div class="or">
+            <div class="line"> </div>
+            <span class="reg1">
                или
              </span>
-          <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <span class="textUs">напишите нам сообщение</span>
         </div>
-        <span class="textUs">напишите нам сообщение</span>
-      </div>
-      <div class="makeBidWrap" style="float: none; bottom: -50px; margin-left: 615px; position: absolute;">
-        <div class="makeBid">
-          <input class='makeBidInp1' type="input" placeholder="Имя" name="name" value="">
-          <input class='makeBidInp2' type="input" placeholder="E-mail" name="name" value="">
-          <input class='makeBidInp3' type="input" placeholder="Сообщение" name="name" value="">
-          <div class="makeBidBut">
-            Написать сообщение
+        <div class="makeBidWrap" style="float: none; bottom: -50px; margin-left: 615px; position: absolute;">
+          <div class="makeBid">
+            <input class='makeBidInp1' type="input" placeholder="Имя" name="name" value="">
+            <input class='makeBidInp2' type="input" placeholder="E-mail" name="name" value="">
+            <input class='makeBidInp3' type="input" placeholder="Сообщение" name="name" value="">
+            <div class="makeBidBut">
+              Написать сообщение
+            </div>
           </div>
         </div>
+        <img src="../pics/a54841781a1ef69389970daaed3c31d9.png" alt="" style="position: absolute; margin-left: 975px; bottom: -50px; z-index: 100;" />
       </div>
-      <img src="../pics/a54841781a1ef69389970daaed3c31d9.png" alt="" style="position: absolute; margin-left: 975px; bottom: -50px; z-index: 100;" />
-    </div>
     </div>
   </div>
 
 
   <!-- Why us -->
-  <div class="whyUsWrap">
+  <div  id="about" class="whyUsWrap">
     <div class="whyUs">
       <p>
         Почему выбирают нас
@@ -515,7 +516,7 @@
 
   <!-- Contacts -->
 
-  <div class="contactsWrap">
+  <div  id="footer" class="contactsWrap">
     <div class="contacts">
       <h1>Контакты</h1>
       <div class="adress">
