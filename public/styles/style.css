@@ -208,7 +208,7 @@ html, body {
   font-family: PTSansRegular;
 }
 .makeBidBut {
-  margin-bottom: 10px;
+transform: translateY(-6px);
   width: 206px;
   height: 40px;
   background-image: linear-gradient(180deg, #9fbf3a 0%, #6a880d 100%);
