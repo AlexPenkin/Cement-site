@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.5">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/jquery.spincrement.js" type="text/javascript"></script>
+  <script src="js/increment.js" type="text/javascript"></script>
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="js/jquery.easing.compatibility.js" type="text/javascript"></script>
   <title>CEM-Rus</title>
   <link href="./styles/style.css" rel="stylesheet" type="text/css" media="screen">
   <link href="./styles/normalize.css" rel="stylesheet" type="text/css" media="screen">
@@ -379,8 +384,36 @@
       <div class="callUsText">
         Связаться с нами
       </div>
+      <img class="man2" src="../pics/man2.png" alt="" / style="z-index: 100;">
+      <div class="takeCons">
+        <span class="reg1">Получите консультацию <br>
+              у наших менеджеров по тел.: <br>
+              <span class="phone">8 (4912) 99-52-52</span></span>
+        <div class="or">
+          <div class="line"> </div>
+          <span class="reg1">
+               или
+             </span>
+             <div class="line"></div>
+        </div>
+        <span class="textUs">напишите нам сообщение</span>
+      </div>
+      <div class="makeBidWrap" style="float: none; bottom: -50px; margin-left: 630px; position: absolute;">
+        <div class="makeBid">
+          <input class='makeBidInp1' type="input" placeholder="Имя" name="name" value="">
+          <input class='makeBidInp2' type="input" placeholder="E-mail" name="name" value="">
+          <input class='makeBidInp3' type="input" placeholder="Сообщение" name="name" value="">
+          <div class="makeBidBut">
+            Написать сообщение
+          </div>
+        </div>
+      </div>
+      <img src="../pics/a54841781a1ef69389970daaed3c31d9.png" alt="" style="position: absolute; margin-left: 991px; bottom: -50px; z-index: 100;" />
     </div>
   </div>
+
+
+  <!-- Why us -->
   <div class="whyUsWrap">
     <div class="whyUs">
       <p>
@@ -414,7 +447,7 @@
     <hr>
     <div class="numbers">
       <div class="num">
-        <span class="n">280</span>
+        <span class="n w">280</span>
         <br>
         <span class="a">тысяч м2</span>
         <br>
@@ -422,7 +455,7 @@
       </div>
 
       <div class="num">
-        <span class="n">7</span>
+        <span class="n years">7</span>
         <br>
         <span class="a">лет</span>
         <br>
@@ -430,7 +463,7 @@
       </div>
 
       <div class="num">
-        <span class="n">1000</span>
+        <span class="n w">1000</span>
         <br>
         <span class="a"> м2/сутки</span>
         <br>

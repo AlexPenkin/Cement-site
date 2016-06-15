@@ -14,6 +14,7 @@
   font-family: AmazingGroteskbold;
   src: url(fonts/AmazingGroteskBold.otf);
 }
+
 html, body {
   min-width: 100%;
   min-height: 100%;
@@ -414,6 +415,8 @@ table:nth-child(even)> .productPrice {
   background: hsl(93, 19%, 91%);
   overflow: hidden;
   z-index: 1;
+  margin-bottom: 80px;
+  overflow: visible;
 }
 .callUs {
   margin: 0 auto;
@@ -469,8 +472,7 @@ table:nth-child(even)> .productPrice {
   min-width: 1200px;
   height: 475px;
   background-image: url('../pics/bid2.png');
-   background-repeat: round round;
-
+  background-repeat: round round;
 }
 .make {
   width: 1200px;
@@ -579,7 +581,7 @@ table:nth-child(even)> .productPrice {
   font-size: 18px !important;
   font-weight: 400 !important;
 }
-.adress :first-child {
+.adress:first-child {
   color: black;
   font-family: PTSansRegular;
   font-size: 25px !important;
@@ -615,9 +617,72 @@ table:nth-child(even)> .productPrice {
   border-style: solid;
   border-width: 130px 50vw 0 50vw;
   border-color: #ffffff transparent transparent transparent;
+}
+@media (max-width:1200px) {
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 130px 600px 0 600px ;
+    border-color: #ffffff transparent transparent transparent;
+  }
 
 }
 .triangleWrap {
   min-width: 1200px;
   position: absolute;
+}
+.callUsText {
+  margin-top: 15px;
+  margin-left: 426px;
+  color: #53b306;
+  font-family: AmazingGroteskRegular;
+  font-size: 37px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 11;
+}
+.man2 {
+  z-index: 100;
+position: absolute;
+bottom: 0;
+}
+.takeCons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+  bottom: 20px;
+  margin-left: 270px;
+}
+.phone {
+  font-family: PTSansBold;
+  font-size: 25px;
+}
+.reg1 {
+  font-size: 20px;
+  font-family: PTSansRegular;
+  line-height: 35px;
+}
+.textUs {
+  font-family: PTSansBold;
+  font-size: 25px;
+  color: #417815;
+}
+.line {
+  margin: 4px 10px 0;
+      display: inline-block;
+      width: 64px;
+      background-color: black;
+      height: 1px;
+
+}
+.or {
+  display: flex;
+    align-items: inherit;
+    justify-content: space-between;
+    padding: 20px 0;
 }
