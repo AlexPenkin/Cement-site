@@ -461,10 +461,17 @@ table:nth-child(even)> .productPrice {
   min-width: 1200px;
   height: 403px;
   background: hsl(93, 19%, 91%);
-  overflow: hidden;
+
   z-index: 1;
   margin-bottom: 80px;
-  overflow: visible;
+
+
+}
+.aw {
+  min-width: 1200px;
+  max-width: 1920px;
+  height: 403px;
+
 }
 .callUs {
   margin: 0 auto;
