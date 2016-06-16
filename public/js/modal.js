@@ -41,7 +41,7 @@ $(document).ready(function() {
     console.log('AAA');
     $.ajax({
         method: "POST",
-        url: "../send_mail.php",
+        url: "send_mail.php",
         data: {
           actiom: "order",
           name: name,
