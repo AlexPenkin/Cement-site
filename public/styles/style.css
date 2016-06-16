@@ -83,6 +83,7 @@ html, body {
   min-width: 1200px;
   height: 46px;
   background-color: #36322d;
+  z-index: 9999;
 }
 .menu {
   width: 1200px;
@@ -117,6 +118,7 @@ html, body {
   font-family: PTSansRegular;
 }
 .manBack {
+  min-width: 1200px;
   height: 540px;
   background-image: url("../pics/manBack.png");
   -webkit-background-size: cover;
@@ -677,15 +679,7 @@ table:nth-child(even)> .productPrice {
   border-width: 130px 50vw 0 49vw;
   border-color: #ffffff transparent transparent transparent;
 }
-@media (max-width:1200px) {
-  .triangle {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 130px 600px 0 600px;
-    border-color: #ffffff transparent transparent transparent;
-  }
-}
+
 .triangleWrap {
   min-width: 1200px;
   position: absolute;
@@ -837,4 +831,30 @@ table:nth-child(even)> .productPrice {
 .makeOrder:active {
   box-shadow: 0 0px #47690a;
   transform: translateY(4px);
+}
+.fix {
+  position: fixed;
+
+ top: 0px;
+  min-width: 1200px;
+
+
+}
+.companyName a {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width:1200px) {
+  .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 130px 600px 0 600px;
+    border-color: #ffffff transparent transparent transparent;
+  }
+  .fix {
+    position: fixed;
+    max-width: 1200px !important;
+    top: 0;
+  }
 }

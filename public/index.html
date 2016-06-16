@@ -13,6 +13,7 @@
   <script src="js/jquery.easing.compatibility.js" type="text/javascript"></script>
   <script src="js/modal.js" type="text/javascript"></script>
   <script src="js/scroll.js" type="text/javascript"></script>
+  <script src="js/stickyHead.js" type="text/javascript"></script>
   <title>CEM-Rus</title>
   <link href="./styles/style.css" rel="stylesheet" type="text/css" media="screen">
   <link href="./styles/normalize.css" rel="stylesheet" type="text/css" media="screen">
@@ -22,7 +23,7 @@
 
 <body>
   <!-- Head -->
-  <div class="headWrap">
+  <div  id="menu" class="headWrap">
     <div class="head">
       <div class="headDiv1">
         <img src="../pics/home2.png" alt="" />
@@ -45,15 +46,15 @@
   <div class="menuWrap">
     <div class="menu">
       <div class="companyName">
-        <span>ООО "РусьЦемСнаб"</span>
+        <a rel="menu" href="#"><span>ООО "РусьЦемСнаб"</span></a>
       </div>
       <div class="menuNav">
-        <a rel= "plates" href="#plates"><span>Тротуарная плитка</span></a>
-        <a rel=  "cement" href="#cement"> <span>Цемент</span></a>
-        <a rel= "bordurs" href="#bordurs"><span>Бордюр</span></a>
-        <a rel= "blocks" href="#blocks"><span>Блоки</span></a>
-        <a rel= "about" href="#about"><span>О нас</span></a>
-        <a rel= "footer" href="#footer"><span>Контакты</span></a>
+        <a rel= "blocks" href="#"><span>Блоки</span></a>
+        <a rel= "bordurs" href="#"><span>Бордюр</span></a>
+        <a rel= "plates" href="#"><span>Тротуарная плитка</span></a>
+        <a rel=  "cement" href="#"> <span>Цемент</span></a>              
+        <a rel= "about" href="#"><span>О нас</span></a>
+        <a rel= "footer" href="#"><span>Контакты</span></a>
       </div>
     </div>
   </div>
@@ -416,7 +417,7 @@
           </div>
           <span class="textUs">напишите нам сообщение</span>
         </div>
-        <div class="makeBidWrap" style="float: none; bottom: -50px; margin-left: 615px; position: absolute;">
+        <div class="makeBidWrap" style="float: none; bottom: -50px; margin-left: 570px; position: absolute;">
           <div class="makeBid">
             <input class='makeBidInp1' type="input" placeholder="Имя" name="name" value="">
             <input class='makeBidInp2' type="input" placeholder="E-mail" name="name" value="">
@@ -426,7 +427,7 @@
             </div>
           </div>
         </div>
-        <img src="../pics/a54841781a1ef69389970daaed3c31d9.png" alt="" style="position: absolute; margin-left: 975px; bottom: -50px; z-index: 100;" />
+        <img src="../pics/a54841781a1ef69389970daaed3c31d9.png" alt="" style="position: absolute; margin-left: 926px; bottom: -50px; z-index: 100; width: 265px;" />
       </div>
     </div>
   </div>

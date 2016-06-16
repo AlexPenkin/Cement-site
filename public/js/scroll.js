@@ -21,13 +21,12 @@ $(document).ready(function() {
     });
 
     $('.menu').find('a').click(function(ev) {
-      console.log('ss');
       ev.preventDefault();
       ev.stopPropagation();
       $('.menus.active').removeClass('active');
 
       $('html, body').animate({
-        'scrollTop': $('#' + $(this).attr('rel')).offset().top-10
+        'scrollTop': $('#' + $(this).attr('rel')).offset().top-70
       }, 700, 'easeOutCubic', function() {});
 
     });
