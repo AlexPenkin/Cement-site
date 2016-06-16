@@ -41,7 +41,7 @@ $(document).ready(function() {
         action: "order",
         name: name,
         email: email,
-        theme: name,
+        theme: theme,
         text: text
       }
     })
