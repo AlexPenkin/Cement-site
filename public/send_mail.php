@@ -31,19 +31,19 @@ if ($_POST['action'] == 'order') {
 
 if (!$error) {
 	
-	$subject = $actions . ' c сайта cem-rus.ru';
+	$subject = $action . ' c сайта cem-rus.ru';
 	
 	$data = [];
 	foreach ($_POST as $key => $val) {
-		$data[$key] = htmlspecialchars($item);
+		$data[$key] = htmlspecialchars($val);
 	}
 	
-	$body = '<div><b>Имя:<b> ' . $data['name'] . '</div>';
-	$body .= '<div><b>Email:<b> ' . $data['email'] . '</div>';
+	$body = '<div><b>Имя:</b> ' . $data['name'] . '</div>';
+	$body .= '<div><b>Email:</b> ' . $data['email'] . '</div>';
 	if ($_POST['action'] == 'order') {
-		$body .= '<div><b>Тема:<b> ' . $data['theme'] . '</div>';
+		$body .= '<div><b>Тема:</b> ' . $data['theme'] . '</div>';
 	}
-	$body .= '<div><b>Сообщение:<b> ' . $data['text'] . '</div>';
+	$body .= '<div><b>Сообщение:</b> ' . $data['text'] . '</div>';
 	
 	require '../php/PHPMailer/PHPMailerAutoload.php';
 
