@@ -11,7 +11,7 @@ $(document).ready(function() {
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
-      $.ajax({
+      /*$.ajax({
           url: 'https://www.google.com/recaptcha/api/siteverify',
           method: "POST",
           secret: '6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ',
@@ -20,7 +20,7 @@ $(document).ready(function() {
             console.log(data);
             auth = true;
           },
-        })
+        })*/
   });
 
   $(document).on('click', '.close', function(event) {
@@ -46,7 +46,8 @@ $(document).ready(function() {
     var theme = $(".modal").find('.makeBidInpTheme').val(),
       name = $(".modal").find('.makeBidInp1').val(),
       email = $(".modal").find('.makeBidInp2').val(),
-      text = $(".modal").find('.makeBidInp3').val();
+      text = $(".modal").find('.makeBidInp3').val(),
+      g-recaptcha-response = $(".modal").find('.g-recaptcha-response').val();
     $.ajax({
       method: "POST",
       url: "send_mail.php",
@@ -56,6 +57,7 @@ $(document).ready(function() {
         email: email,
         theme: theme,
         text: text
+        g-recaptcha-response:
       },
     })
 
