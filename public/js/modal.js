@@ -56,8 +56,8 @@ $(document).ready(function() {
         name: name,
         email: email,
         theme: theme,
-        text: text
-        gRecaptchaResponse:
+        text: text,
+        gRecaptchaResponse:gRecaptchaResponse
       },
     })
 
