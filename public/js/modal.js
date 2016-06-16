@@ -10,6 +10,13 @@ $(document).ready(function() {
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
+      $($.ajax({
+          url: 'https://www.google.com/recaptcha/api/siteverify',
+          method: "POST",
+          secret: '6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ',
+          response: 'g-recaptcha-response',
+          success: console.log('yeah'),
+        })
   });
 
   $(document).on('click', '.close', function(event) {
@@ -25,35 +32,28 @@ $(document).ready(function() {
 
   $(document).on('click', '.modal-content', function(event) {
     event.stopPropagation();
-    var theme = $(".modal").find('.makeBidInpTheme').val(),
-      name = $(".modal").find('.makeBidInp1').val(),
-      email = $(".modal").find('.makeBidInp2').val(),
-      text = $(".modal").find('.makeBidInp3').val();
   });
 
   // отправка
   $(document).on('click', '.makeOrder', function(event) {
     event.stopPropagation();
-    $($.ajax({
-        url: 'https://www.google.com/recaptcha/api/siteverify',
-        method: "POST",
-        secret: '6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ',
-        response: 'g-recaptcha-response',
-        success: $.ajax({
-          method: "POST",
-          url: "send_mail.php",
-          data: {
-            action: "order",
-            name: name,
-            email: email,
-            theme: theme,
-            text: text
-          },
-        })
-
-      });
-    }))
 
 
+    var theme = $(".modal").find('.makeBidInpTheme').val(),
+      name = $(".modal").find('.makeBidInp1').val(),
+      email = $(".modal").find('.makeBidInp2').val(),
+      text = $(".modal").find('.makeBidInp3').val();
+    $.ajax({
+      method: "POST",
+      url: "send_mail.php",
+      data: {
+        action: "order",
+        name: name,
+        email: email,
+        theme: theme,
+        text: text
+      },
+    })
 
+  });
 });
