@@ -6,14 +6,12 @@ var winWidth = $(window).innerWidth();
   $(win).on("scroll", function(e) {
     var x = $(this).scrollLeft();
     var y = $(this).scrollTop();
-    console.log(x);
     var scroll = $(this).scrollTop();
     if (scroll > 71) {
       wrap.addClass("fix");
       $(".fix").css("width", winWidth);
       $(".fix").offset(function(i, coord) {
         var newCoord = {};
-        console.log('scrollLeft:' + win.scrollLeft());
         newCoord.left = win.scrollLeft() - x;
         return newCoord;
       });
