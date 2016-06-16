@@ -31,11 +31,11 @@ if ($_POST['action'] == 'order') {
 
 if (!$error) {
 	
-	$subject = $actions . ' c сайта cem-rus.ru';
+	$subject = $action . ' c сайта cem-rus.ru';
 	
 	$data = [];
 	foreach ($_POST as $key => $val) {
-		$data[$key] = htmlspecialchars($item);
+		$data[$key] = htmlspecialchars($val);
 	}
 	
 	$body = '<div><b>Имя:<b> ' . $data['name'] . '</div>';
