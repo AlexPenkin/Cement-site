@@ -1,6 +1,7 @@
 $(document).ready(function() {
   //само модальное окно
   var modal = $('.modal');
+  var auth = false;
 
   $(document).on('click', '.order', function(event) {
     var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
@@ -15,7 +16,10 @@ $(document).ready(function() {
           method: "POST",
           secret: '6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ',
           response: 'g-recaptcha-response',
-          success: console.log('yeah'),
+          success: function (data) {
+            console.log(data);
+            auth = true;
+          },
         })
   });
 
