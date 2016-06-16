@@ -10,7 +10,7 @@ $(document).ready(function() {
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
-      $($.ajax({
+      $.ajax({
           url: 'https://www.google.com/recaptcha/api/siteverify',
           method: "POST",
           secret: '6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ',
