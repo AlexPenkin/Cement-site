@@ -1,6 +1,6 @@
 <?php
 
-phpinfo();
+//phpinfo();
 
 require '../php/PHPMailer/PHPMailerAutoload.php';
 
@@ -30,7 +30,13 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Here is the subject';
 $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
