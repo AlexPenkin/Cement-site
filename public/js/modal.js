@@ -51,7 +51,7 @@ $(document).ready(function() {
         }
       })
       .done(function(msg) {
-        alert("Data Saved: " + msg);
+        alert("Message: " + msg);
       });
   });
   });
