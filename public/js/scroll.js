@@ -16,10 +16,6 @@ $(document).ready(function() {
       checkLocation();
     });
 
-    $('.menu').click(function() {
-      $(this).find('a').click();
-    });
-
     $('.menu').find('a').click(function(ev) {
       ev.preventDefault();
       ev.stopPropagation();
