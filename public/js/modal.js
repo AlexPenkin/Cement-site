@@ -43,7 +43,7 @@ $(document).ready(function() {
         method: "POST",
         url: "send_mail.php",
         data: {
-          actiom: "order",
+          action: "order",
           name: name,
           email: email,
           theme: name,
