@@ -866,3 +866,6 @@ table:nth-child(even)> .productPrice {
     top: 0;
   }
 }
+.active{
+text-shadow: 0px 0px 0px white, 0 0 1em white;
+}

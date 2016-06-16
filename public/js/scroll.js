@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('.menu').find('a').click(function(ev) {
       ev.preventDefault();
       ev.stopPropagation();
-      $('.menus.active').removeClass('active');
+      $('.menuNav.active').removeClass('active');
 
       $('html, body').animate({
         'scrollTop': $('#' + $(this).attr('rel')).offset().top-70
@@ -32,33 +32,42 @@ $(document).ready(function() {
 
   function checkLocation() {
 
-    var m1 = $('#plates').offset().top - 70,
-      m2 = $('#cement').offset().top - 70,
+    var m1 = $('.head').offset().top - 70,
+      m2 = $('#blocks').offset().top - 70,
       m3 = $('#bordurs').offset().top - 70,
-      m4 = $('#blocks').offset().top - 70,
-      m5 = $('#about').offset().top - 70;
-      m6 = $('#footer').offset().top - 70;
+      m4 = $('#plates').offset().top - 70,
+      m5 = $('#cement').offset().top - 70;
+      m6 = $('#about').offset().top - 70;
+      m7 = $('#footer').offset().top - 70;
+
     //m5 = $('#head').offset().top - 300;
 
-    if ($(window).scrollTop() > 0) $('.header').addClass('go');
-    else $('.header').removeClass('go');
+    if ($(window).scrollTop() > 0) $('.head').addClass('go');
+    else $('.head').removeClass('go');
 
-    $('.menus a.active').removeClass('active');
+    $('.menuNav a.active').removeClass('active');
 
     if ($(window).scrollTop() < m2)
-      $('.menus a[rel="head"]').addClass('active');
+      $('.menuNav a[rel="head"]').find('span').addClass('active');
     else
     if ($(window).scrollTop() < m3)
-      $('.menus a[rel="service"]').addClass('active');
+      $('.menuNav a[rel="blocks"]').addClass('active');
     else
     if ($(window).scrollTop() < m4)
-      $('.menus a[rel="soft"]').addClass('active');
+      $('.menuNav a[rel="bordurs"]').addClass('active');
     else
     if ($(window).scrollTop() < m5)
-      $('.menus  a[rel="hard"]').addClass('active');
+      $('.menuNav  a[rel="plates"]').addClass('active');
     else
     if ($(window).scrollTop() < m6)
-      $('.menus  a[rel="news"]').addClass('active');
+      $('.menuNav  a[rel="cement"]').addClass('active');
+      else
+      if ($(window).scrollTop() < m7)
+        $('.menuNav  a[rel="about"]').addClass('active');
+        else
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 950) {
+       $('.menuNav  a[rel="footer"]').addClass('active');
+   }
 
 
   }
