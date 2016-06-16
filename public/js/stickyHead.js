@@ -8,7 +8,6 @@ var winWidth = $(window).innerWidth();
     var y = $(this).scrollTop();
     console.log(x);
     var scroll = $(this).scrollTop();
-
     if (scroll > 71) {
       wrap.addClass("fix");
       $(".fix").css("width", winWidth);
@@ -18,15 +17,10 @@ var winWidth = $(window).innerWidth();
         newCoord.left = win.scrollLeft() - x;
         return newCoord;
       });
-
-
-
     } else {
-
       wrap.removeClass("fix");
       wrap.toggleClass('.menuWrap');
       $(".menuWrap").css("width", '')
-
     }
   });
   $(win).resize(function(){
