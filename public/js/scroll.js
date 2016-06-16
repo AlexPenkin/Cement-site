@@ -16,18 +16,13 @@ $(document).ready(function() {
       checkLocation();
     });
 
-    $('.menu').click(function() {
-      $(this).find('a').click();
-    });
-
     $('.menu').find('a').click(function(ev) {
-      console.log('ss');
       ev.preventDefault();
       ev.stopPropagation();
       $('.menus.active').removeClass('active');
 
       $('html, body').animate({
-        'scrollTop': $('#' + $(this).attr('rel')).offset().top-10
+        'scrollTop': $('#' + $(this).attr('rel')).offset().top-70
       }, 700, 'easeOutCubic', function() {});
 
     });
@@ -37,12 +32,12 @@ $(document).ready(function() {
 
   function checkLocation() {
 
-    var m1 = $('#plates').offset().top - 60,
-      m2 = $('#cement').offset().top - 60,
-      m3 = $('#bordurs').offset().top - 60,
-      m4 = $('#blocks').offset().top - 60,
-      m5 = $('#about').offset().top - 60;
-      m6 = $('#footer').offset().top - 60;
+    var m1 = $('#plates').offset().top - 70,
+      m2 = $('#cement').offset().top - 70,
+      m3 = $('#bordurs').offset().top - 70,
+      m4 = $('#blocks').offset().top - 70,
+      m5 = $('#about').offset().top - 70;
+      m6 = $('#footer').offset().top - 70;
     //m5 = $('#head').offset().top - 300;
 
     if ($(window).scrollTop() > 0) $('.header').addClass('go');

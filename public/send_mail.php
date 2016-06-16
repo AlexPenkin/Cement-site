@@ -1,8 +1,8 @@
 <?php
 
 $actions = [
-	'message' => 'Сообщение',
-	'order' => 'Заказ'
+	'message' => 'РЎРѕРѕР±С‰РµРЅРёРµ',
+	'order' => 'Р—Р°РєР°Р·'
 ];
 
 if (!isset($_POST['action']) || !isset($actions[$_POST['action']])) {
@@ -14,36 +14,36 @@ $action = $actions[$_POST['action']];
 $error = [];
 
 if (!isset($_POST['name']) || trim($_POST['name']) == "") {
-	$error[] = "Введите имя.";
+	$error[] = "Р’РІРµРґРёС‚Рµ РёРјСЏ.";
 }
 if (!isset($_POST['email']) || trim($_POST['email']) == "") {
-	$error[] = "Введите email.";
+	$error[] = "Р’РІРµРґРёС‚Рµ email.";
 }
 if (!isset($_POST['text']) || trim($_POST['text']) == "") {
-	$error[] = "Введите текст сообщения.";
+	$error[] = "Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ.";
 }
 
 if ($_POST['action'] == 'order') {
 	if (!isset($_POST['theme']) || trim($_POST['theme']) == "") {
-		$error[] = "Введите тему.";
+		$error[] = "Р’РІРµРґРёС‚Рµ С‚РµРјСѓ.";
 	}
 }
 
 if (!$error) {
 	
-	$subject = $actions . ' c сайта cem-rus.ru';
+	$subject = $actions . ' c СЃР°Р№С‚Р° cem-rus.ru';
 	
 	$data = [];
 	foreach ($_POST as $key => $val) {
 		$data[$key] = htmlspecialchars($item);
 	}
 	
-	$body = '<div><b>Имя:<b> ' . $data['name'] . '</div>';
+	$body = '<div><b>РРјСЏ:<b> ' . $data['name'] . '</div>';
 	$body .= '<div><b>Email:<b> ' . $data['email'] . '</div>';
 	if ($_POST['action'] == 'order') {
-		$body .= '<div><b>Тема:<b> ' . $data['theme'] . '</div>';
+		$body .= '<div><b>РўРµРјР°:<b> ' . $data['theme'] . '</div>';
 	}
-	$body .= '<div><b>Сообщение:<b> ' . $data['text'] . '</div>';
+	$body .= '<div><b>РЎРѕРѕР±С‰РµРЅРёРµ:<b> ' . $data['text'] . '</div>';
 	
 	require '../php/PHPMailer/PHPMailerAutoload.php';
 
@@ -85,14 +85,14 @@ if (!$error) {
 	if(!$mail->send()) {
 		//echo 'Message could not be sent.';
 		//echo 'Mailer Error: ' . $mail->ErrorInfo;
-		$error[] = "При отправке сообщения произошла ошибка. Пожалуйста, попробуйте отправить Ваше сообщение позднее.";
+		$error[] = "РџСЂРё РѕС‚РїСЂР°РІРєРµ СЃРѕРѕР±С‰РµРЅРёСЏ РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕРїСЂРѕР±СѓР№С‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ Р’Р°С€Рµ СЃРѕРѕР±С‰РµРЅРёРµ РїРѕР·РґРЅРµРµ.";
 	}
 }
 
 if (!$error) {
 	$result = [
 		'succes' => TRUE,
-		'message' => 'Ваше сообщение успешно отправлено.'
+		'message' => 'Р’Р°С€Рµ СЃРѕРѕР±С‰РµРЅРёРµ СѓСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ.'
 	];
 } else {
 	$result = [
