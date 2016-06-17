@@ -869,3 +869,6 @@ table:nth-child(even)> .productPrice {
 .active{
 text-shadow: 0px 0px 0px white, 0 0 1em white;
 }
+.onError {
+  color: red;
+}

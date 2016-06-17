@@ -61,9 +61,12 @@ $(document).ready(function() {
       },
       success: function(json){
        if (json['success'] == true) {
-         alert('All ok');
+         $('.onError').hide();
+         $('.makeOrder').html('Сообщение отправлено!')
        } else {
-         alert('Error')
+         alert('Error');
+         $('.onError').show();
+         $('.onError').html('Проверьте, все ли поля заполнены правильно');
        }
    }
     })
