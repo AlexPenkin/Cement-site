@@ -873,6 +873,7 @@ text-shadow: 0px 0px 0px white, 0 0 1em white;
   display: none;
   color: red;
   font-family: PTSansRegular;
+  transition: 1s;
 }
 
 .messageSent {
