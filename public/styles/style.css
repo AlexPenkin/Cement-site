@@ -205,14 +205,14 @@ html, body {
   font-family: PTSansRegular;
 }
 .makeBidInp3 {
-  padding-top: 21px;
-  /* padding-left: 0; */
-  padding: 6px 0px 117px;
+/*   padding-top: 21px;
+  padding-left: 0;
+  padding: 6px 0px 117px; */
   text-align: inherit;
   /* line-height: 50px; */
   text-indent: 15px;
   width: 322px;
-  /* height: 123px; */
+  height: 123px;
   background-color: white;
   border: 1px solid gainsboro;
   font-family: PTSansRegular;
