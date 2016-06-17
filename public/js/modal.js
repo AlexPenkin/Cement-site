@@ -151,7 +151,7 @@ $(document).ready(function() {
     var name = $(".modal2").find('.makeBidInp1').val(),
       email = $(".modal2").find('.makeBidInp2').val(),
       text = $(".modal2").find('.makeBidInp3').val(),
-      gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val() || false;
+      gRecaptchaResponse = $(".modal2").find('.g-recaptcha-response').val() || false;
     $.ajax({
         method: "POST",
         url: "send_mail.php",
