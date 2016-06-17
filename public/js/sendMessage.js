@@ -22,8 +22,8 @@ $(document).ready(function() {
            $('.order').html('Сообщение отправлено!')
             $('.order').removeClass('.order');
          } else {
-           alert('Error');
-           $('.onError').show();
+           alert('Произошла ошибка! Проверьте, все ли поля заполнены правильно');
+           //$('.onError').show();
            $('.onError').html('Проверьте, все ли поля заполнены правильно');
          }
      }
