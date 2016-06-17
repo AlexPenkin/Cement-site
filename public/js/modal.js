@@ -59,10 +59,10 @@ $(document).ready(function() {
         text: text,
         gRecaptchaResponse:gRecaptchaResponse
       },
-      done: function() {
-        grecaptcha.reset();
-      }
-    })
 
+    })
+    .done(function() {
+      grecaptcha.reset();
+    })
   });
 });
