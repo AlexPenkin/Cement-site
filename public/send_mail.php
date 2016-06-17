@@ -13,20 +13,6 @@ $action = $actions[$_POST['action']];
 
 $error = [];
 
-// Каптча
-if (!isset($_POST['gRecaptchaResponse'])) {
-	$error[] = "Пройдите спам-контроль.";
-} else {
-	require_once "../php/recaptchalib.php";
-	$reCaptcha = new ReCaptcha("6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ");
-	$resp = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $_POST["gRecaptchaResponse"]
-    );
-	if (!$resp->success) {
-		$error[] = "Вы не прошли спам-контроль.";
-	}
-}
 if (!isset($_POST['name']) || trim($_POST['name']) == "") {
 	$error[] = "Введите имя.";
 }
@@ -40,6 +26,23 @@ if (!isset($_POST['text']) || trim($_POST['text']) == "") {
 if ($_POST['action'] == 'order') {
 	if (!isset($_POST['theme']) || trim($_POST['theme']) == "") {
 		$error[] = "Введите тему.";
+	}
+}
+
+// Каптча
+if (!$error) {
+	if (!isset($_POST['gRecaptchaResponse'])) {
+		$error[] = "Пройдите спам-контроль.";
+	} else {
+		require_once "../php/recaptchalib.php";
+		$reCaptcha = new ReCaptcha("6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ");
+		$resp = $reCaptcha->verifyResponse(
+			$_SERVER["REMOTE_ADDR"],
+			$_POST["gRecaptchaResponse"]
+		);
+		if (!$resp->success) {
+			$error[] = "Вы не прошли спам-контроль.";
+		}
 	}
 }
 
@@ -73,7 +76,7 @@ if (!$error) {
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                    // TCP port to connect to
 
-	$mail->setFrom('site@cem-rus.ru', 'Mailer');
+	$mail->setFrom('site@cem-rus.ru', 'cem-rus.ru');
 	//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 	$mail->addAddress('a.penkin@smartcodes.ru');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
