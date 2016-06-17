@@ -465,6 +465,7 @@ table :nth-child(even)> .productPrice {
 }
 .underDef {
   font-family: PTSansRegular !important;
+  font-size: 19px !important;
 }
 .callUsWrap {
   position: relative;
@@ -849,7 +850,7 @@ table :nth-child(even)> .productPrice {
   box-shadow: 0 3px #47690a;
 }
 .makeOrder2 {
-  width: 126px;
+  width: 195px;
   height: 35px;
   background-image: linear-gradient(180deg, #9fbf3a 0%, #6a880d 100%);
   border-radius: 3px;
@@ -863,7 +864,11 @@ table :nth-child(even)> .productPrice {
   cursor: pointer;
   box-shadow: 0 3px #47690a;
 }
-.makeOrder:active {
+.makeOrder1:active {
+  box-shadow: 0 0px #47690a;
+  transform: translateY(4px);
+}
+.makeOrder2:active {
   box-shadow: 0 0px #47690a;
   transform: translateY(4px);
 }

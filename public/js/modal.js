@@ -172,3 +172,15 @@ $(document).ready(function() {
       })
       });
 });
+$( document ).ajaxStart(function() {
+  $(".makeOrder2").empty();
+  $(".makeOrder2").append('<img src="../pics/loader.gif" alt="" />');
+  $(".makeOrder1").empty();
+  $(".makeOrder1").append('<img src="../pics/loader.gif" alt="" />');
+});
+$( document ).ajaxComplete(function( event,request, settings ) {
+  $(".makeOrder2").empty();
+  $(".makeOrder2").append('Отправить сообщение');
+  $(".makeOrder1").empty();
+  $(".makeOrder1").append('Заказать');
+});
