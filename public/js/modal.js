@@ -69,7 +69,7 @@ $(document).ready(function() {
           email: email,
           theme: theme,
           text: text,
-          gRecaptchaResponse: gRecaptchaResponse
+          gRecaptchaResponse: grecaptcha.getResponse(widgetId1)()
         },
         success: function(json) {
           if (json['success'] == true) {
@@ -160,7 +160,7 @@ $(document).ready(function() {
           name: name,
           email: email,
           text: text,
-          gRecaptchaResponse: gRecaptchaResponse
+          gRecaptchaResponse: grecaptcha.getResponse(widgetId2)()
         },
         success: function(json) {
           if (json['success'] == true) {
