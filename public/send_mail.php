@@ -47,21 +47,21 @@ if (!$error) {
 }
 
 if (!$error) {
-	
+
 	$subject = $action . ' c сайта cem-rus.ru';
-	
+
 	$data = [];
 	foreach ($_POST as $key => $val) {
 		$data[$key] = htmlspecialchars($val);
 	}
-	
+
 	$body = '<div><b>Имя:</b> ' . $data['name'] . '</div>';
 	$body .= '<div><b>Email:</b> ' . $data['email'] . '</div>';
 	if ($_POST['action'] == 'order') {
 		$body .= '<div><b>Тема:</b> ' . $data['theme'] . '</div>';
 	}
 	$body .= '<div><b>Сообщение:</b> ' . $data['text'] . '</div>';
-	
+
 	require '../php/PHPMailer/PHPMailerAutoload.php';
 
 	$mail = new PHPMailer;
@@ -78,7 +78,7 @@ if (!$error) {
 
 	$mail->setFrom('site@cem-rus.ru', 'cem-rus.ru');
 	//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-	$mail->addAddress('a.penkin@smartcodes.ru');               // Name is optional
+	$mail->addAddress('marmurad@yandex.ru');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
 	//$mail->addBCC('bcc@example.com');
@@ -95,7 +95,7 @@ if (!$error) {
 		)
 	);*/
 	$mail->CharSet = "utf-8";
-	
+
 	$mail->Subject = $subject;
 	$mail->Body    = $body;
 	//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
