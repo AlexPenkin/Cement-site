@@ -51,7 +51,7 @@ $(document).ready(function() {
   });
 
   // отправка
-  $(document).on('click', '.makeOrder', function(event) {
+  $(document).on('click', '.makeOrder1', function(event) {
     event.stopPropagation();
 
 
@@ -143,7 +143,7 @@ $(document).ready(function() {
   });
 
   // отправка
-  $(document).on('click', '.makeOrder', function(event) {
+  $(document).on('click', '.makeOrder2', function(event) {
     event.stopPropagation();
 
 
