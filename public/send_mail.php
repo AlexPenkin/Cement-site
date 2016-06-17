@@ -13,7 +13,7 @@ $action = $actions[$_POST['action']];
 
 $error = [];
 
-// Капча
+// Каптча
 if (!isset($_POST['gRecaptchaResponse'])) {
 	$error[] = "Пройдите спам-контроль.";
 } else {
@@ -118,3 +118,4 @@ if (!$error) {
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($result);
 exit;
+
