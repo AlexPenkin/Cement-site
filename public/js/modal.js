@@ -15,7 +15,13 @@ $(document).ready(function() {
     var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
 
     event.preventDefault();
+    var widgetId1;
 
+    var onloadCallback = function() {
+      widgetId1 = grecaptcha.render('captcha1', {
+             'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
+       });
+     };
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
@@ -94,7 +100,12 @@ $(document).ready(function() {
     //var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
     console.log('sss');
     event.preventDefault();
-
+    var widgetId2;
+    var onloadCallback = function() {
+      widgetId2 = grecaptcha.rende(document.getElementById('captcha2'), {
+             'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
+       });
+     };
 
     modal.fadeIn(400);
     modal.find('.makeBidInp1').val($(this).siblings('.makeBidInp1').val());

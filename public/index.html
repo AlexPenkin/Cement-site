@@ -15,7 +15,9 @@
   <script src="js/scroll.js" type="text/javascript"></script>
   <script src="js/stickyHead.js" type="text/javascript"></script>
   <script src="js/sendMessage.js" type="text/javascript"></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+       async defer>
+   </script>
   <title>ООО РусьЦемСнаб цемент купить, блоки купить, тротурная плитка купить, цемент рязань, блоки рязань, тротуарная плитка рязань,</title>
   <link href="./styles/style.css" rel="stylesheet" type="text/css" media="screen">
   <link href="./styles/normalize.css" rel="stylesheet" type="text/css" media="screen">
@@ -570,7 +572,10 @@
           </textarea>
 
           <center>
-            <div class="g-recaptcha" style="margin-top: 20px;" data-sitekey="6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb"></div>
+            <!--  <div class="g-recaptcha" style="margin-top: 20px;" data-sitekey="6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb"></div> -->
+            <div  style="margin-top: 20px; height: 20px; width: 20px;" id="captcha1">
+
+            </div>
           </center>
 
           <center>
@@ -585,11 +590,10 @@
 
   <div class="modal2">
     <div class="modalContentWrap">
-
-
       <div class="modal-content">
         <span class="close">x</span>
         <div class="modalInputs">
+
           <input class='makeBidInp1' style="width: 100%;" type="input" placeholder="Имя" name="name" value="">
           <input class='makeBidInp2' style="width: 100%;" type="email" placeholder="E-mail" name="name" value="">
           <textarea class='makeBidInp3' placeholder="Cообщение" style=" width: 100%; resize: none;"></textarea>
@@ -598,14 +602,17 @@
           </textarea>
 
           <center>
-            <div class="g-recaptcha" style="margin-top: 20px;" data-sitekey="6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb"></div>
+          <!--  <div class="g-recaptcha" style="margin-top: 20px;" data-sitekey="6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb"></div> -->
+          <div id="captcha2">
+
+          </div>
           </center>
 
           <center>
             <div class="makeOrder">Заказать</div>
             <p class = 'onError'></p>
           </center>
-
+      
         </div>
       </div>
     </div>
