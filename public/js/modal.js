@@ -12,8 +12,8 @@ $(document).ready(function() {
     modal.find('.makeBidInp1').val('');
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
-    modal.find('#captcha1').empty();
-    var widgetId1;
+    modal.find('#captcha1').remove();
+
 
   }
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-
+      $('#as1').append('<div id="captcha1"></div>')
     var onloadCallback1 = function() {
       widgetId1 = grecaptcha.render('captcha1', {
              'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
@@ -99,7 +99,8 @@ $(document).ready(function() {
     modal.find('.makeBidInp1').val('');
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
-    modal.find('#captcha2').empty();
+    modal.find('#captcha2').remove();
+
 
   }
 
@@ -107,7 +108,7 @@ $(document).ready(function() {
     //var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
     console.log('sss');
     event.preventDefault();
-
+    $('#as2').append('<div id="captcha2"></div>')
     var verifyCallback = function(response) {
       alert(response);
     };
