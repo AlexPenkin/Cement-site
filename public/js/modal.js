@@ -1,3 +1,6 @@
+
+var widgetId2;
+var widgetId1;
 $(document).ready(function() {
   //само модальное окно
   var modal = $('.modal');
@@ -9,19 +12,22 @@ $(document).ready(function() {
     modal.find('.makeBidInp1').val('');
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
+    modal.find('#captcha1').empty();
+    grecaptcha.reset(widgetId1);
   }
 
   $(document).on('click', '.order', function(event) {
     var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
 
     event.preventDefault();
-    var widgetId1;
 
-    var onloadCallback = function() {
+
+    var onloadCallback1 = function() {
       widgetId1 = grecaptcha.render('captcha1', {
              'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
        });
      };
+     onloadCallback1();
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
@@ -85,6 +91,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   //само модальное окно
+
   var modal = $('.modal2');
   var auth = false;
   function cleanInputs () {
@@ -94,18 +101,24 @@ $(document).ready(function() {
     modal.find('.makeBidInp1').val('');
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
+    modal.find('#captcha2').empty();
+    grecaptcha.reset(widgetId2);
   }
 
   $(document).on('click', '.makeBidBut', function(event) {
     //var name = $(this).parent('center').parent('.productOrder').parent('tr').find('.productName').html();
     console.log('sss');
     event.preventDefault();
-    var widgetId2;
-    var onloadCallback = function() {
-      widgetId2 = grecaptcha.rende(document.getElementById('captcha2'), {
+
+    var verifyCallback = function(response) {
+      alert(response);
+    };
+    var onloadCallback2 = function() {
+      widgetId2 = grecaptcha.render(document.getElementById('captcha2'), {
              'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
        });
      };
+     onloadCallback2();
 
     modal.fadeIn(400);
     modal.find('.makeBidInp1').val($(this).siblings('.makeBidInp1').val());
