@@ -30,7 +30,7 @@ $(document).ready(function() {
   $(document).on('click', '.modal', function(event) {
     event.preventDefault();
     modal.fadeOut(400);
-
+    cleanInputs();
   });
 
   $(document).on('click', '.modal-content', function(event) {
