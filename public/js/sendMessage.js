@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
   $(document).on('click', '.makeBidBut', function(event) {
     var self = $(this);
@@ -6,6 +6,7 @@ $(document).ready(function() {
     name = $(self).siblings('.makeBidInp1').val(),
       email = $(self).siblings('.makeBidInp2').val(),
       text = $(self).siblings('.makeBidInp3').val();
+      gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val() || false;
     $.ajax({
       method: "POST",
       url: "send_mail.php",
@@ -13,7 +14,8 @@ $(document).ready(function() {
         action: "message",
         name: name,
         email: email,
-        text: text
+        text: text,
+        gRecaptchaResponse: gRecaptchaResponse
       },
       success: function(json) {
         if (json['success'] == true) {
@@ -31,3 +33,4 @@ $(document).ready(function() {
   });
 
 });
+*/
