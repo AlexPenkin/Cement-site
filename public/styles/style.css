@@ -870,5 +870,7 @@ table:nth-child(even)> .productPrice {
 text-shadow: 0px 0px 0px white, 0 0 1em white;
 }
 .onError {
+  display: none;
   color: red;
+  font-family: PTSansRegular;
 }
