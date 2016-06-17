@@ -47,7 +47,7 @@ $(document).ready(function() {
       name = $(".modal").find('.makeBidInp1').val(),
       email = $(".modal").find('.makeBidInp2').val(),
       text = $(".modal").find('.makeBidInp3').val(),
-      gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val();
+      gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val() || false;
     $.ajax({
       method: "POST",
       url: "send_mail.php",
