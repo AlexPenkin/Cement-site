@@ -13,8 +13,6 @@ $(document).ready(function() {
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
     modal.find('#captcha1').remove();
-
-
   }
 
   $(document).on('click', '.order', function(event) {

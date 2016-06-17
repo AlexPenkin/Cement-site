@@ -382,7 +382,7 @@ a {
 .productName {
   width: 257px;
   height: 76px;
-  border: 0.5px solid #a6b897;
+  border: 1px solid #a6b897;
   border-collapse: collapse;
   text-align: left;
   padding-left: 20px;
@@ -394,7 +394,7 @@ a {
 .productPrice {
   width: 95px;
   height: 76px;
-  border: 0.5px solid #a6b897;
+  border: 1px solid #a6b897;
   border-collapse: collapse;
   text-align: center;
   color: #53b306;
@@ -406,7 +406,7 @@ a {
   width: 153px;
   height: 76px;
   background-color: white;
-  border: 0.5px solid #a6b897;
+  border: 1px solid #a6b897;
   border-collapse: collapse;
   text-align: center;
   color: black;
@@ -414,10 +414,10 @@ a {
   font-size: 18px;
   font-weight: 700;
 }
-table:nth-child(even)> .productName {
+table :nth-child(even)> .productName {
   background: #e7ece3;
 }
-table:nth-child(even)> .productPrice {
+table :nth-child(even)> .productPrice {
   background: #e7ece3;
 }
 .sexy_line {
