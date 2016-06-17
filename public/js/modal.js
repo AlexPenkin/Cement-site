@@ -66,7 +66,6 @@ $(document).ready(function() {
          $('.makeOrder').html('Сообщение отправлено!')
           $('.makeOrder').removeClass('makeOrder');
        } else {
-         alert('Error');
          $('.onError').show();
          $('.onError').html('Проверьте, все ли поля заполнены правильно');
        }
