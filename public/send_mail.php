@@ -105,12 +105,12 @@ if (!$error) {
 
 if (!$error) {
 	$result = [
-		'succes' => TRUE,
+		'success' => TRUE,
 		'message' => 'Ваше сообщение успешно отправлено.'
 	];
 } else {
 	$result = [
-		'succes' => FALSE,
+		'success' => FALSE,
 		'errors' => $error
 	];
 }
