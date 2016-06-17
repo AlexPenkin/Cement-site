@@ -13,7 +13,8 @@ $(document).ready(function() {
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
     modal.find('#captcha1').empty();
-    grecaptcha.reset(widgetId1);
+    var widgetId1;
+
   }
 
   $(document).on('click', '.order', function(event) {
@@ -80,10 +81,7 @@ $(document).ready(function() {
           }
         }
       })
-      .done(function() {
-        grecaptcha.reset();
-      })
-  });
+    });
 });
 
 //////////////////////////////////////////////
@@ -102,7 +100,7 @@ $(document).ready(function() {
     modal.find('.makeBidInp2').val('');
     modal.find('.makeBidInp3').val('');
     modal.find('#captcha2').empty();
-    grecaptcha.reset(widgetId2);
+
   }
 
   $(document).on('click', '.makeBidBut', function(event) {
@@ -173,8 +171,5 @@ $(document).ready(function() {
           }
         }
       })
-      .done(function() {
-        grecaptcha.reset();
-      })
-  });
+      });
 });
