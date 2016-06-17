@@ -888,4 +888,5 @@ text-shadow: 0px 0px 0px white, 0 0 1em white;
     font-size: 18px;
     font-weight: 400;
     box-shadow: 0 3px #47690a;
+    transition: 1s;
 }
