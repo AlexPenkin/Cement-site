@@ -14,7 +14,19 @@ $(document).ready(function() {
           name: name,
           email: email,
           text: text
-        }
+        },
+        success: function(json){
+         if (json['success'] == true) {
+           $('.onError').hide();
+           $('.order').addClass('messageSent');
+           $('.order').html('Сообщение отправлено!')
+            $('.order').removeClass('.order');
+         } else {
+           alert('Error');
+           $('.onError').show();
+           $('.onError').html('Проверьте, все ли поля заполнены правильно');
+         }
+     }
       })
         });
 
