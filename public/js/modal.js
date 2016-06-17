@@ -59,6 +59,9 @@ $(document).ready(function() {
         text: text,
         gRecaptchaResponse:gRecaptchaResponse
       },
+      done: function() {
+        grecaptcha.reset();
+      }
     })
 
   });
