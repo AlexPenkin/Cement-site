@@ -60,7 +60,7 @@ $(document).ready(function() {
         gRecaptchaResponse:gRecaptchaResponse
       },
       success: function(json){
-       if (json[success] == true) {
+       if (json['success'] == true) {
          alert('All ok');
        } else {
          alert('Error')
