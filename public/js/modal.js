@@ -60,12 +60,12 @@ $(document).ready(function() {
         gRecaptchaResponse:gRecaptchaResponse
       },
       success: function(json){
-       alert('success')
-   },
-   error: function(){
-       alert('error')
+       if (json[success] == true) {
+         alert('All ok');
+       } else {
+         alert('Error')
+       }
    }
-
     })
     .done(function() {
       grecaptcha.reset();
