@@ -59,6 +59,12 @@ $(document).ready(function() {
         text: text,
         gRecaptchaResponse:gRecaptchaResponse
       },
+      success: function(json){
+       alert('success')
+   },
+   error: function(){
+       alert('error')
+   }
 
     })
     .done(function() {
