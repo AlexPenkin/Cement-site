@@ -13,6 +13,20 @@ $action = $actions[$_POST['action']];
 
 $error = [];
 
+// Капча
+if (!isset($_POST['gRecaptchaResponse'])) {
+	$error[] = "Пройдите спам-контроль.";
+} else {
+	require_once "../php/recaptchalib.php";
+	$reCaptcha = new ReCaptcha("6LdjwSITAAAAAG0_vSr_bC_1trXsoRuvq_fkRwjJ");
+	$resp = $reCaptcha->verifyResponse(
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["gRecaptchaResponse"]
+    );
+	if (!$resp->success) {
+		$error[] = "Вы не прошли спам-контроль.";
+	}
+}
 if (!isset($_POST['name']) || trim($_POST['name']) == "") {
 	$error[] = "Введите имя.";
 }
