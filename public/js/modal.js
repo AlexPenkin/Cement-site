@@ -62,7 +62,9 @@ $(document).ready(function() {
       success: function(json){
        if (json['success'] == true) {
          $('.onError').hide();
+         $('.makeOrder').addClass('messageSent');
          $('.makeOrder').html('Сообщение отправлено!')
+          $('.makeOrder').removeClass('makeOrder');
        } else {
          alert('Error');
          $('.onError').show();
