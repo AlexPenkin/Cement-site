@@ -61,12 +61,7 @@ $(document).ready(function() {
         success: function(json) {
           if (json['success'] == true) {
             modal.fadeOut(400);
-            modal.find('.makeBidInp1').val('');
-            modal.find('.makeBidInp2').val('');
-            modal.find('.makeBidInp3').val('');
-            $('.makeBid').find('.makeBidInp1').val('');
-            $('.makeBid').find('.makeBidInp2').val('');
-            $('.makeBid').find('.makeBidInp3').val('');
+            cleanInputs();
           } else {
             $('.onError').show();
             $('.onError').html('Проверьте, все ли поля заполнены правильно');
@@ -139,22 +134,16 @@ $(document).ready(function() {
         method: "POST",
         url: "send_mail.php",
         data: {
-          action: "order",
+          action: "message",
           name: name,
           email: email,
-          theme: theme,
           text: text,
           gRecaptchaResponse: gRecaptchaResponse
         },
         success: function(json) {
           if (json['success'] == true) {
             modal.fadeOut(400);
-            name.val('');
-            email.val('');
-            theme.val('');
-            $('.makeBid').find('.makeBidInp1').val('');
-            $('.makeBid').find('.makeBidInp2').val('');
-            $('.makeBid').find('.makeBidInp3').val('');
+            cleanInputs();
           } else {
             $('.onError').show();
             $('.onError').html('Проверьте, все ли поля заполнены правильно');
