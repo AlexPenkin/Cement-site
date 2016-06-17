@@ -149,10 +149,9 @@ $(document).ready(function() {
     event.stopPropagation();
 
 
-    var theme = $(".modal").find('.makeBidInpTheme').val(),
-      name = $(".modal").find('.makeBidInp1').val(),
-      email = $(".modal").find('.makeBidInp2').val(),
-      text = $(".modal").find('.makeBidInp3').val(),
+    var name = $(".modal2").find('.makeBidInp1').val(),
+      email = $(".modal2").find('.makeBidInp2').val(),
+      text = $(".modal2").find('.makeBidInp3').val(),
       gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val() || false;
     $.ajax({
         method: "POST",
