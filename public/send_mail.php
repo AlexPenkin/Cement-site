@@ -91,7 +91,8 @@ if (!$error) {
 			'allow_self_signed' => true
 		)
 	);*/
-
+	$mail->CharSet = "utf-8";
+	
 	$mail->Subject = $subject;
 	$mail->Body    = $body;
 	//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
@@ -118,4 +119,3 @@ if (!$error) {
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($result);
 exit;
-
