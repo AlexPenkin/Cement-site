@@ -75,7 +75,7 @@ if (!$error) {
 
 	$mail->setFrom('site@cem-rus.ru', 'Mailer');
 	//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-	$mail->addAddress('grungestranger@yandex.ru');               // Name is optional
+	$mail->addAddress('a.penkin@smartcodes.ru');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
 	//$mail->addBCC('bcc@example.com');
