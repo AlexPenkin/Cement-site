@@ -1,11 +1,11 @@
-
 var widgetId2;
 var widgetId1;
 $(document).ready(function() {
   //само модальное окно
   var modal = $('.modal');
-  var auth = false;
-  function cleanInputs () {
+
+
+  function cleanInputs() {
     $('.makeBid').find('.makeBidInp1').val('');
     $('.makeBid').find('.makeBidInp2').val('');
     $('.makeBid').find('.makeBidInp3').val('');
@@ -20,17 +20,17 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-      $('#as1').append('<div id="captcha1"></div>')
+    $('#as1').append('<div id="captcha1"></div>')
     var onloadCallback1 = function() {
       widgetId1 = grecaptcha.render('captcha1', {
-             'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
-       });
-     };
-     onloadCallback1();
+        'sitekey': '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
+      });
+    };
+    onloadCallback1();
     modal.fadeIn(400);
     var name1 =
       $('.makeBidInpTheme').val(name)
-    });
+  });
 
   $(document).on('click', '.close', function(event) {
     event.preventDefault();
@@ -59,27 +59,27 @@ $(document).ready(function() {
       text = $(".modal").find('.makeBidInp3').val(),
       gRecaptchaResponse = $(".modal").find('.g-recaptcha-response').val() || false;
     $.ajax({
-        method: "POST",
-        url: "send_mail.php",
-        data: {
-          action: "order",
-          name: name,
-          email: email,
-          theme: theme,
-          text: text,
-          gRecaptchaResponse: grecaptcha.getResponse(widgetId1)
-        },
-        success: function(json) {
-          if (json['success'] == true) {
-            modal.fadeOut(400);
-            cleanInputs();
-          } else {
-            $('.onError').show();
-            $('.onError').html('Проверьте, все ли поля заполнены правильно');
-          }
+      method: "POST",
+      url: "send_mail.php",
+      data: {
+        action: "order",
+        name: name,
+        email: email,
+        theme: theme,
+        text: text,
+        gRecaptchaResponse: grecaptcha.getResponse(widgetId1)
+      },
+      success: function(json) {
+        if (json['success'] == true) {
+          modal.fadeOut(400);
+          cleanInputs();
+        } else {
+          $('.onError').show();
+          $('.onError').html('Проверьте, все ли поля заполнены правильно');
         }
-      })
-    });
+      }
+    })
+  });
 });
 
 //////////////////////////////////////////////
@@ -90,7 +90,8 @@ $(document).ready(function() {
 
   var modal = $('.modal2');
   var auth = false;
-  function cleanInputs () {
+
+  function cleanInputs() {
     $('.makeBid').find('.makeBidInp1').val('');
     $('.makeBid').find('.makeBidInp2').val('');
     $('.makeBid').find('.makeBidInp3').val('');
@@ -112,10 +113,10 @@ $(document).ready(function() {
     };
     var onloadCallback2 = function() {
       widgetId2 = grecaptcha.render(document.getElementById('captcha2'), {
-             'sitekey' : '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
-       });
-     };
-     onloadCallback2();
+        'sitekey': '6LdjwSITAAAAAJHU2NNFtHtQZuv9NY3FKcKlBWjb'
+      });
+    };
+    onloadCallback2();
 
     modal.fadeIn(400);
     modal.find('.makeBidInp1').val($(this).siblings('.makeBidInp1').val());
@@ -123,7 +124,7 @@ $(document).ready(function() {
     modal.find('.makeBidInp3').val($(this).siblings('.makeBidInp3').val())
     var name1 =
       $('.makeBidInpTheme').val(name)
-    });
+  });
 
   $(document).on('click', '.close', function(event) {
     event.preventDefault();
@@ -151,34 +152,34 @@ $(document).ready(function() {
       text = $(".modal2").find('.makeBidInp3').val(),
       gRecaptchaResponse = $(".modal2").find('.g-recaptcha-response').val() || false;
     $.ajax({
-        method: "POST",
-        url: "send_mail.php",
-        data: {
-          action: "message",
-          name: name,
-          email: email,
-          text: text,
-          gRecaptchaResponse: grecaptcha.getResponse(widgetId2)
-        },
-        success: function(json) {
-          if (json['success'] == true) {
-            modal.fadeOut(400);
-            cleanInputs();
-          } else {
-            $('.onError').show();
-            $('.onError').html('Проверьте, все ли поля заполнены правильно');
-          }
+      method: "POST",
+      url: "send_mail.php",
+      data: {
+        action: "message",
+        name: name,
+        email: email,
+        text: text,
+        gRecaptchaResponse: grecaptcha.getResponse(widgetId2)
+      },
+      success: function(json) {
+        if (json['success'] == true) {
+          modal.fadeOut(400);
+          cleanInputs();
+        } else {
+          $('.onError').show();
+          $('.onError').html('Проверьте, все ли поля заполнены правильно');
         }
-      })
-      });
+      }
+    })
+  });
 });
-$( document ).ajaxStart(function() {
+$(document).ajaxStart(function() {
   $(".makeOrder2").empty();
   $(".makeOrder2").append('<img src="../pics/7121.gif" alt="" />');
   $(".makeOrder1").empty();
   $(".makeOrder1").append('<img src="../pics/7121.gif" alt="" />');
 });
-$( document ).ajaxComplete(function( event,request, settings ) {
+$(document).ajaxComplete(function(event, request, settings) {
   $(".makeOrder2").empty();
   $(".makeOrder2").append('Отправить сообщение');
   $(".makeOrder1").empty();
